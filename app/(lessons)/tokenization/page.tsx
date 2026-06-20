@@ -56,11 +56,13 @@ export default function Page() {
       </Prose>
 
       <Aside>
-        Our splitter is hand-written and approximate. Real tokenizers use{" "}
-        <strong>byte-pair encoding</strong>: they start from raw bytes and
-        repeatedly merge the most frequent adjacent pair, learning a vocabulary
-        from the training data itself. Same idea, far more refined — and the ids
-        here are invented, not GPT&apos;s.
+        The widget above runs the <strong>real</strong> tokenizer —
+        GPT-4o&apos;s <code>o200k_base</code> byte-pair encoding, via{" "}
+        <code>js-tiktoken</code>. BPE starts from raw bytes and repeatedly merges
+        the most frequent adjacent pair, learning its vocabulary from the
+        training data. That&apos;s why those token ids are the genuine ones the
+        model sees — and why emoji and non-Latin text fracture into raw{" "}
+        <code>\x…</code> byte fragments.
       </Aside>
 
       <Prose>
