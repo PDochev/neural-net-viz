@@ -44,7 +44,7 @@ export function Figure({
   return (
     <figure
       className={cn(
-        "group/figure my-8 overflow-hidden rounded-xl border border-border bg-card shadow-sm",
+        "group/figure my-8 overflow-hidden rounded-xl border border-border bg-card",
         className,
       )}
       aria-labelledby={`${figId}-title`}

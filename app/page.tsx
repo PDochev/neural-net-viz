@@ -12,11 +12,6 @@ export default function Home() {
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-graph opacity-70"
       />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-40 left-1/2 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-signal/10 blur-[120px]"
-      />
-
       <header className="relative z-10 mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <Brand />
         <div className="flex items-center gap-2">
@@ -50,11 +45,11 @@ export default function Home() {
               works.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground text-pretty">
-              An interactive explainer that builds modern AI from the ground up —
-              a single artificial neuron, all the way to a transformer-based
+              An interactive explainer that builds modern AI from the ground up
+              — a single artificial neuron, all the way to a transformer-based
               language model. Every idea is something you can{" "}
-              <span className="text-foreground">touch and change</span>, not just
-              read.
+              <span className="text-foreground">touch and change</span>, not
+              just read.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
@@ -109,8 +104,8 @@ export default function Home() {
         </section>
 
         <footer className="border-t border-border py-8 text-sm text-muted-foreground">
-          A hands-on tour of the machinery behind modern AI. All models shown are
-          small in-browser simulations — captions flag where reality is
+          A hands-on tour of the machinery behind modern AI. All models shown
+          are small in-browser simulations — captions flag where reality is
           simplified.
         </footer>
       </main>
