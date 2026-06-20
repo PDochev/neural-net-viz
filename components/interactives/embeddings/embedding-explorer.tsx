@@ -367,7 +367,7 @@ export function EmbeddingExplorer() {
                 {cosine === null ? (
                   <span className="text-muted-foreground">pick 2</span>
                 ) : (
-                  <span className="border border-signal/40 bg-signal/10 px-2 py-1 font-medium tabular-nums">
+                  <span className="border border-signal/40 bg-muted/90 px-2 py-1 font-medium tabular-nums">
                     {cosine.toFixed(3)}
                   </span>
                 )}
@@ -404,7 +404,7 @@ export function EmbeddingExplorer() {
                 onChange={(v) => setAna((s) => ({ ...s, c: v }))}
               />
               <span className="text-muted-foreground">≈</span>
-              <span className="border border-signal/40 bg-signal/10 px-2 py-1 font-medium">
+              <span className="border border-signal/40 bg-muted/90 px-2 py-1 font-medium">
                 {analogy.result.word}
               </span>
             </div>
