@@ -127,7 +127,7 @@ export function GradientSandbox() {
               ].map((item) => (
                 <div
                   key={item.k}
-                  className="border border-border bg-muted/30 px-2.5 py-1.5"
+                  className="border border-border bg-muted/90 px-2.5 py-1.5"
                 >
                   <dt className="text-[0.65rem] uppercase tracking-wider text-muted-foreground">
                     {item.k}

@@ -239,7 +239,7 @@ export function NetworkPlayground() {
             ))}
           </div>
 
-          <div className="border border-border bg-muted/30 p-3.5">
+          <div className="border border-border bg-muted/90 p-3.5">
             <NodeDetail
               layer={selected.layer}
               index={selected.index}

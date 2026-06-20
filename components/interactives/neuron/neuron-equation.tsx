@@ -17,7 +17,7 @@ export function NeuronEquation({
   result: NeuronResult;
 }) {
   return (
-    <div className="space-y-2.5 overflow-x-auto border border-border bg-muted/30 p-4 font-mono text-sm">
+    <div className="space-y-2.5 overflow-x-auto border border-border bg-muted/90 p-4 font-mono text-sm">
       {/* symbolic */}
       <div className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-muted-foreground">
         <span className="text-foreground">z</span>

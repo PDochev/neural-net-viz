@@ -350,16 +350,17 @@ export function EmbeddingExplorer() {
               Cosine similarity
             </h4>
             <p className="text-xs leading-relaxed text-muted-foreground">
-              Click two words on the plot. Cosine similarity is the cosine of the
-              angle between their vectors: <code className="font-mono">1</code> =
-              same direction, <code className="font-mono">0</code> = unrelated.
+              Click two words on the plot. Cosine similarity is the cosine of
+              the angle between their vectors:{" "}
+              <code className="font-mono">1</code> = same direction,{" "}
+              <code className="font-mono">0</code> = unrelated.
             </p>
             <div className="flex items-center gap-2 font-mono text-sm">
-              <span className="border border-border bg-muted/40 px-2 py-1">
+              <span className="border border-border bg-muted/90 px-2 py-1">
                 {selected[0] ?? "—"}
               </span>
               <span className="text-muted-foreground">·</span>
-              <span className="border border-border bg-muted/40 px-2 py-1">
+              <span className="border border-border bg-muted/90 px-2 py-1">
                 {selected[1] ?? "—"}
               </span>
               <span className="ml-auto">
@@ -443,7 +444,7 @@ function AnalogySelect({
       <SelectTrigger
         size="sm"
         aria-label={ariaLabel}
-        className="h-8 w-[8.5rem] font-mono text-sm"
+        className="h-8 w-[8.5rem] font-mono text-sm bg-muted/90"
       >
         <SelectValue />
       </SelectTrigger>
