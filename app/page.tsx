@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Brand, BrandGlyph } from "@/components/nav/brand";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { chapters } from "@/lib/chapters";
 
 export default function Home() {
   return (
