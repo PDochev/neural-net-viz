@@ -1,7 +1,16 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-/** Wordmark: a small neural glyph + the title in the display face. */
+// Causal attention-weight pattern (lower-triangular), echoing the site's
+// attention heatmap. Last cell is the blue accent.
+const ATTENTION = [
+  [0.85, 0.1, 0.1, 0.1],
+  [0.45, 0.8, 0.1, 0.1],
+  [0.3, 0.5, 0.85, 0.1],
+  [0.22, 0.32, 0.55, 1],
+];
+
+/** Wordmark: a small attention-matrix glyph + the title in the display face. */
 export function Brand({ className }: { className?: string }) {
   return (
     <Link
@@ -26,29 +35,23 @@ export function Brand({ className }: { className?: string }) {
 
 export function BrandGlyph({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 32 32"
-      fill="none"
-      aria-hidden
-      className={className}
-    >
-      {/* three-node "neuron firing" mark */}
-      <path
-        d="M7 9 L17 16 M7 23 L17 16 M17 16 L26 16"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        className="text-muted-foreground/50"
-      />
-      <circle cx="7" cy="9" r="2.5" className="fill-neg" />
-      <circle cx="7" cy="23" r="2.5" className="fill-pos" />
-      <circle
-        cx="17"
-        cy="16"
-        r="3.5"
-        className="fill-signal"
-      />
-      <circle cx="26" cy="16" r="2.5" className="fill-pos" />
+    <svg viewBox="0 0 32 32" aria-hidden className={className}>
+      {ATTENTION.flatMap((row, r) =>
+        row.map((opacity, c) => {
+          const accent = r === 3 && c === 3;
+          return (
+            <rect
+              key={`${r}-${c}`}
+              x={4 + c * 7}
+              y={4 + r * 7}
+              width={6}
+              height={6}
+              className={accent ? "fill-signal" : "fill-foreground"}
+              fillOpacity={accent ? 1 : opacity}
+            />
+          );
+        }),
+      )}
     </svg>
   );
 }

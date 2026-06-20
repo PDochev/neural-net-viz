@@ -70,44 +70,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Chapter index */}
-        <section className="border-t border-border py-14">
-          <h2 className="mb-8 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-            The path
-          </h2>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {chapters.map((chapter) => {
-              const Icon = chapter.icon;
-              return (
-                <Link
-                  key={chapter.slug}
-                  href={`/${chapter.slug}`}
-                  className="group flex flex-col gap-3 rounded-xl border border-border bg-card/60 p-5 backdrop-blur transition-all hover:-translate-y-0.5 hover:border-signal/40 hover:shadow-md"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs tabular-nums text-muted-foreground">
-                      {String(chapter.index).padStart(2, "0")}
-                    </span>
-                    <Icon className="size-4 text-muted-foreground transition-colors group-hover:text-signal" />
-                  </div>
-                  <h3 className="font-display text-lg font-medium leading-snug tracking-tight">
-                    {chapter.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground text-pretty">
-                    {chapter.blurb}
-                  </p>
-                </Link>
-              );
-            })}
-          </div>
-        </section>
-
-        <footer className="border-t border-border py-8 text-sm text-muted-foreground">
-          A hands-on tour of the machinery behind modern AI. All models shown
-          are small in-browser simulations — captions flag where reality is
-          simplified.
-        </footer>
       </main>
     </div>
   );
